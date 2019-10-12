@@ -258,14 +258,36 @@ a.titles:hover{
   animation-duration: 6s;
 }
 
-#CSS-01, #CSS-02{
+.maininfo{
   animation-name: hold;
   animation-duration: 6s;
 }
 
-/* @keyframes hold {
+.left-edge{
+  animation-name: hold1;
+  animation-duration: 6s;
+}
+
+.about, .coding{
+  animation-name: hold2;
+  animation-duration: 6s;
+}
+
+/* @keyframes hold{
   0% {opacity: 0;}
   50% {opacity: 0;}
+  100% {opacity: 100;}
+}
+
+@keyframes hold1{
+  0% {opacity: 0;}
+  70% {opacity: 0;}
+  100% {opacity: 100;}
+}
+
+@keyframes hold2{
+  0% {opacity: 0;}
+  90% {opacity: 0;}
   100% {opacity: 100;}
 } */
 
@@ -400,6 +422,36 @@ a.titles:hover{
   font-family: "Fira Mono", "Roboto Mono";
   font-weight: bold;
   font-size: 18px;
+}
+
+.problem{
+  margin-top: 5rem;
+}
+
+#CSS-15{
+  z-index: inherit;
+  color: rgb(154, 165, 199);
+  font-family: "Nunito";
+  font-size: 22px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+#CSS-16{
+  z-index: inherit;
+  color: rgb(136, 146, 176);
+  font-family: "Nunito";
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+#CSS-17{
+  z-index: inherit;
+  color: rgb(136, 146, 176);
+  font-family: "Nunito";
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 /* ==========================================================================
