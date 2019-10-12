@@ -100,13 +100,30 @@ textarea {
    ========================================================================== */
 body{
   min-height: 100%;
+  margin-left: 20rem;
   background: rgb(10, 25, 47);
-  width: 95%;
-  min-width: 640px;
-  max-width: 1680px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+.left-edge{
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(10, 25, 47);
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+#CSS-001{
+  padding-top: 2rem;
+  margin-left: 25%;
+}
+
+#CSS-002{
+  padding-top: 2rem;
+  margin-left: 16.6%;
 }
 
 .intro-text{
@@ -165,7 +182,7 @@ body{
 .head{
   text-decoration: none;
   z-index: 3;
-  background: rgb(10, 25, 79);
+  color: rgb(10, 25, 47);
   height: 100px;
   animation-name: head;
 }
@@ -179,7 +196,6 @@ h1 {
   font-family: "SF Mono", "Fira Code", "Fira Mono",
     "Roboto Mono", "Lucida Console", Monaco, monospace;
   cursor: pointer;
-  float: right;
   border: rgb(0, 189, 255);
   border-style: solid;
   border-width: 1px;
@@ -200,12 +216,11 @@ a.resume:link, a.resume:visited{
 
 .titles{
   cursor: pointer;
+  margin: 0px 0px 0px 0px;
   color: rgb(204, 214, 246);
   font-family: "SF Mono", "Fira Code", "Fira Mono",
     "Roboto Mono", "Lucida Console", Monaco, monospace;
-  float: right;
-  margin-top: 39px;
-  margin-right: 55px;
+
   animation-name: hold;
   animation-duration: 6s;
 }
@@ -228,15 +243,12 @@ a.titles:hover{
 }
 
 #CSS-1{
-  display: none;
   z-index: 5;
+  margin: 10% 0px 0px 25%;
   height:45px;
   width:45px;
   border-radius: 45px;
   background:white;
-  position: relative;
-  top: 27px;
-  margin-left: 120px;
   color: rgb(10, 25, 47);
   text-align: center;
   font-family: 'Nunito';
@@ -261,6 +273,133 @@ a.titles:hover{
   width: 50%;
   position: relative;
   margin: auto;
+}
+
+/* ===================================
+   Main Info
+   ===================================
+ */
+
+.maininfo{
+  z-index: 5;
+  position: relative;
+  margin: auto;
+  margin-right: 10rem;
+  padding-top: 15rem;
+}
+
+#CSS-04{
+  z-index: inherit;
+  color: rgb(0, 189, 255);
+  font-size: 16px;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+  font-weight: normal;
+}
+
+#CSS-05{
+  z-index: inherit;
+  color: white;
+  font-family: "Fira Mono", "Roboto Mono";
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 1.1;
+  margin: 0px 0px 10px 0px;
+}
+
+#CSS-06{
+  z-index: inherit;
+  color: rgb(204, 214, 246);
+  font-family: "Fira Mono", "Roboto Mono";
+  font-weight: bold;
+  font-size: 55px;
+  line-height: .9;
+  margin: 0px;
+}
+
+#CSS-07{
+  z-index: inherit;
+  font-family: "Fira Mono", "Roboto Mono";
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(204, 214, 246);
+  line-height: 1.3;
+  padding-top: 40px;
+}
+
+/* ===================================
+   About Section
+   ===================================
+ */
+
+.about{
+  z-index: 5;
+  position: relative;
+  margin-top: 25rem;
+  margin-right: 27%;
+}
+
+#CSS-08{
+  z-index: inherit;
+  color: rgb(204, 214, 246);
+  font-family: "Fira Mono", "Roboto Mono";
+  font-weight: bold;
+  font-size: 32px;
+}
+
+#CSS-09{
+  z-index: inherit;
+  display: block;
+  height: 3rem;
+}
+
+#CSS-10{
+  object-fit: cover;
+  object-position: center center;
+  opacity: 1;
+  z-index: inherit;
+  border-radius: 3px;
+  float: right;
+  width: 300px;
+  height: 300px;
+  vertical-align: middle;
+  padding-left: 10rem;
+  
+}
+
+#CSS-11{
+  z-index: inherit;
+  color: rgb(136, 146, 176);
+  font-family: "Nunito";
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* ===================================
+   Code Section
+   ===================================
+ */
+
+.coding{
+  z-index: 5;
+  position: relative;
+  margin-top: 25rem;
+  margin-right: 27%;
+}
+
+#CSS-12{
+  z-index: inherit;
+  color: rgb(204, 214, 246);
+  font-family: "Fira Mono", "Roboto Mono";
+  font-weight: bold;
+  font-size: 32px;
+}
+
+#CSS-14{
+  z-index: inherit;
+  color: rgb(204, 214, 246);
+  font-family: "Fira Mono", "Roboto Mono";
+  font-weight: bold;
+  font-size: 18px;
 }
 
 /* ==========================================================================

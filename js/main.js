@@ -1,5 +1,5 @@
 // When the user scrolls the page, execute sticky_header
-window.onscroll = function() {sticky_header()};
+// window.onscroll = function() {sticky_header()};
 
 // Get the header
 var header = document.getElementById("myHeader");
