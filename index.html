@@ -8,6 +8,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
 
@@ -20,17 +21,20 @@
 
   <script src="js/highlight.pack.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
+  <script src="js/main.js"></script>
 </head>
 
 <body>
   <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
+  <div class="intro-circle">R</div>
+  <div class="intro-text"></div>
+  <div id="page-container">
   <div class="left-edge">
     <p id="CSS-1">R</p>
-    <p id="CSS-001"><a href="#" class="titles">About</a></p>
-    <p id="CSS-001"><a href="#"class="titles">Code</a></p>
-    <p id="CSS-002"><a href="#" class="resume">Resume</a></p>
+    <p id="CSS-002"><a href="/resume.pdf" target="_blank" class="resume">Resume</a></p>
+    
   </div>
   <div class="maininfo" id="CSS-03">
     <h1 id="CSS-04">Hello! My name is</h1>
@@ -51,6 +55,7 @@
       for programming.
     </p>
   </div>
+  <div id="CSS-18"></div>
   <div class="coding">
       <h1 id="CSS-12">Coding Samples</h1>
       <hr id="CSS-13"></hr>
@@ -195,14 +200,10 @@
         </code></pre>
       </div>
     </div>
-
-  <div class="intro-circle">R</div>
-  <div class="intro-text"></div>
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
@@ -210,6 +211,8 @@
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
+  </div>
+    <footer id="footer"></footer>
+  </div>
 </body>
-
 </html>

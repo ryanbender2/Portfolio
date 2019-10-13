@@ -99,9 +99,10 @@ textarea {
    Author's custom styles
    ========================================================================== */
 body{
-  min-height: 100%;
+  min-height: 100vh;
   margin-left: 20rem;
   background: rgb(10, 25, 47);
+  padding-bottom: 2.5rem; 
 }
 
 .left-edge{
@@ -137,7 +138,8 @@ body{
   top: 139.5px;
   animation-name: text-fade;
   animation-duration: 3s;
-  z-index: 0
+  z-index: 0;
+  right: 10rem;
 }
 
 .intro-circle{
@@ -156,28 +158,29 @@ body{
   height: 50px;
   position: relative;
   margin: auto;
+  right: 10rem;
   top: 200px;
   animation-name: fadein;
   animation-duration: 3s;
 }
 
-/* @keyframes text-fade {
+@keyframes text-fade {
   0% {visibility: visible; background: rgb(10, 25, 47)
-; opacity: 0;}
+; opacity: 0; z-index: 8;}
   30% {visibility: visible; background: rgb(10, 25, 47)
 ; opacity: 0;}
   60% {visibility: visible; background: white; opacity: 100;}
-  100% {opacity: 0;}
+  100% {opacity: 0; z-index: 0;}
 }
 
 @keyframes fadein {
   0% {visibility: visible; top: 130px; border: solid 13px rgb(10, 25, 47)
-; color: rgb(10, 25, 47)}
+; color: rgb(10, 25, 47); z-index: 9;}
   30% {visibility: visible; top: 200px; border: solid 13px white; color: rgb(10, 25, 47)}
   60% {visibility: visible; top: 200px; border: solid 13px rgb(10, 25, 47)
 ; opacity: 100;}
-  100% {opacity: 0;}
-} */
+  100% {opacity: 0; z-index: 1;}
+}
 
 .head{
   text-decoration: none;
@@ -273,7 +276,7 @@ a.titles:hover{
   animation-duration: 6s;
 }
 
-/* @keyframes hold{
+@keyframes hold{
   0% {opacity: 0;}
   50% {opacity: 0;}
   100% {opacity: 100;}
@@ -289,7 +292,7 @@ a.titles:hover{
   0% {opacity: 0;}
   90% {opacity: 0;}
   100% {opacity: 100;}
-} */
+}
 
 #CSS-01{
   width: 50%;
@@ -379,13 +382,11 @@ a.titles:hover{
   object-position: center center;
   opacity: 1;
   z-index: inherit;
-  border-radius: 3px;
   float: right;
   width: 300px;
   height: 300px;
   vertical-align: middle;
   padding-left: 10rem;
-  
 }
 
 #CSS-11{
@@ -404,7 +405,7 @@ a.titles:hover{
 .coding{
   z-index: 5;
   position: relative;
-  margin-top: 25rem;
+  margin-top: 5rem;
   margin-right: 27%;
 }
 
@@ -452,6 +453,18 @@ a.titles:hover{
   font-family: "Nunito";
   font-size: 16px;
   line-height: 1.5;
+}
+
+#CSS-18{
+  position: relative;
+  margin-top: 25rem;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+
+#footer {
 }
 
 /* ==========================================================================
