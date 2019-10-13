@@ -36,7 +36,7 @@
     <h1 id="CSS-04">Hello! My name is</h1>
     <p id="CSS-05">Ryan Bender</p>
     <p id="CSS-06">I like to solve interesting problems with software.</p>
-    <p id="CSS-07">I am a softare engineer based in Lynchburg, VA specialzing
+    <p id="CSS-07">I am a junior softare engineer based in Lynchburg, VA specialzing
       in automation (with an interest in low-level development).</p>
   </div>
   <div class="about">
@@ -98,19 +98,104 @@
             game_grid[column][row] = str(game_grid[column][row])
 
     return game_grid
+
+    # Run solution
+    print(num_grid([
+      ["-", "-", "-", "#", "#"],
+      ["-", "#", "-", "-", "-"],
+      ["-", "-", "#", "-", "-"],
+      ["-", "#", "#", "-", "-"],
+      ["-", "-", "-", "-", "-"]]))
+
         </code></pre>
       </div>
   </div>
+  <div class="coding">
+    <div class="problem">
+      <p id="CSS-15">Jake's Meal Time by Helen Yu (edabit)</p>
+      <p id="CSS-16">Description: Jake is a very habitual person. He eats breakfast at 7:00 a.m. each morning,
+        lunch at 12:00 p.m. and dinner at 7:00 p.m. in the evening. Create a function
+        that takes in the current time as a string and determines the duration of time
+        before Jake's next meal. Represent this as a list with the first and second
+        elements representing hours and minutes, respectively.</p>
+      <pre id="CSS-17">My Solution:<code>
+    def time_to_eat(current_time):
+    # split time and THC
+    time, THC = current_time.split()
+    hr, minute = time.split(':')
+    
+    # change time into military format
+    if THC[0] == 'p':
+        time24 = str(int(hr) + 12) + ':' + minute
+    else:
+        time24 = time
+    hr_24, minute_24 = time24.split(':')
+    time_in_minutes = (int(hr_24) * 60) + int(minute_24)
+    
+    # the time falls through each check until it slides into correct category
+    if time_in_minutes < 420:  # 7:00 a.m.
+        tte_hr = int((420 - time_in_minutes) / 60)
+        tte_min = abs((time_in_minutes % 60) - 60)
+        if tte_min == 60:
+            tte_min = 0
+        return [tte_hr, tte_min]
+    
+    if time_in_minutes < 720:  # 12:00 p.m.
+        tte_hr = int((720 - time_in_minutes) / 60)
+        tte_min = abs((time_in_minutes % 60) - 60)
+        if tte_min == 60:
+            tte_min = 0
+        return [tte_hr, tte_min]
+    
+    if time_in_minutes < 1140:  # 7:00 p.m.
+        tte_hr = int((1140 - time_in_minutes) / 60)
+        tte_min = abs((time_in_minutes % 60) - 60)
+        if tte_min == 60:
+            tte_min = 0
+        return [tte_hr, tte_min]
+    
+    if time_in_minutes > 1139:  # any time after 7:00 p.m.
+        tte_hr = int((1440 - time_in_minutes) / 60) + 7
+        tte_min = abs((time_in_minutes % 60) - 60)
+        if tte_min == 60:
+            tte_min = 0
+        return [tte_hr, tte_min]
 
 
-  <!-- <div id="CSS-01">
-  <pre id="CSS-02"><code>
-    print("hello")
-    def name(d):
-        fa = ''
-        return fa
-  </code></pre>
-  </div> -->
+    # Run solution
+    print(time_to_eat("8:01 p.m."))
+
+      </code></pre>
+    </div>
+  </div>
+
+    <div class="coding">
+      <div class="problem">
+        <p id="CSS-15">Bit Rotation by Albrecht (edabit)</p>
+        <p id="CSS-16">Description: Python offers some bit operations but not bit rotation. 
+          To complete that, create a function that takes three parameters:
+
+                n: Integer, which in binary representaion should be rotated.
+                m: Number of rotation steps that should be performed.
+                d: Boolean value; True = rotation right, False = rotation left.</p>
+        <pre id="CSS-17">My Solution:<code>
+    def bit_rotate(number, rotations, l_or_r):
+    # convert number into into binary
+    bin_num = bin(number)[2:]
+    
+    # location position to split number
+    pos = len(bin_num) - rotations if l_or_r else rotations
+    
+    # flip bits at split position and convert back to base 10
+    return int(bin_num[pos:] + bin_num[:pos], 2)
+
+    
+    # Run solution
+    print(bit_rotate(58, 9, True))
+        </code></pre>
+      </div>
+    </div>
+
   <div class="intro-circle">R</div>
   <div class="intro-text"></div>
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
