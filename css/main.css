@@ -1,0 +1,648 @@
+/*! HTML5 Boilerplate v7.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+  height: 100%;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body{
+  min-height: 100vh;
+  margin-left: 20rem;
+  background: rgb(10, 25, 47);
+  padding-bottom: 2.5rem; 
+}
+
+.left-edge{
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(10, 25, 47);
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+#CSS-001{
+  padding-top: 2rem;
+  margin-left: 25%;
+}
+
+#CSS-002{
+  padding-top: 2rem;
+  margin-left: 16.6%;
+}
+
+.intro-text{
+  visibility: hidden;
+  height:45px;
+  width:45px;
+  border-radius: 45px;
+  background:white;
+  position: relative;
+  margin: auto;
+  top: 139.5px;
+  animation-name: text-fade;
+  animation-duration: 3s;
+  z-index: 0;
+  right: 10rem;
+}
+
+.intro-circle{
+  visibility: hidden; 
+  z-index: 1;
+  color: rgb(10, 25, 47);
+  font-family: 'Nunito';
+  font-weight: bolder;
+  font-size: 36px;
+  text-align: center;
+  -moz-border-radius: 20px/20px;
+  -webkit-border-radius: 30px 30px;
+  border-radius: 50px/50px;
+  border: solid 13px rgb(10, 25, 47);
+  width: 50px;
+  height: 50px;
+  position: relative;
+  margin: auto;
+  right: 10rem;
+  top: 200px;
+  animation-name: fadein;
+  animation-duration: 3s;
+}
+
+@keyframes text-fade {
+  0% {visibility: visible; background: rgb(10, 25, 47)
+; opacity: 0; z-index: 8;}
+  30% {visibility: visible; background: rgb(10, 25, 47)
+; opacity: 0;}
+  60% {visibility: visible; background: white; opacity: 100;}
+  100% {opacity: 0; z-index: 0;}
+}
+
+@keyframes fadein {
+  0% {visibility: visible; top: 130px; border: solid 13px rgb(10, 25, 47)
+; color: rgb(10, 25, 47); z-index: 9;}
+  30% {visibility: visible; top: 200px; border: solid 13px white; color: rgb(10, 25, 47)}
+  60% {visibility: visible; top: 200px; border: solid 13px rgb(10, 25, 47)
+; opacity: 100;}
+  100% {opacity: 0; z-index: 1;}
+}
+
+.head{
+  text-decoration: none;
+  z-index: 3;
+  color: rgb(10, 25, 47);
+  height: 100px;
+  animation-name: head;
+}
+
+h1 {
+  font-size: 15px;
+}
+
+.resume{
+  color: rgb(0, 189, 255);
+  font-family: "SF Mono", "Fira Code", "Fira Mono",
+    "Roboto Mono", "Lucida Console", Monaco, monospace;
+  cursor: pointer;
+  border: rgb(0, 189, 255);
+  border-style: solid;
+  border-width: 1px;
+  border-image: initial;
+  border-radius: 3px;
+  padding: 0.50rem .6rem;
+  margin-top: 30px;
+  margin-right: 60px;
+  animation-name: hold;
+  animation-duration: 6s;
+}
+
+a.resume:link, a.resume:visited{
+  z-index: 4;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.titles{
+  cursor: pointer;
+  margin: 0px 0px 0px 0px;
+  color: rgb(204, 214, 246);
+  font-family: "SF Mono", "Fira Code", "Fira Mono",
+    "Roboto Mono", "Lucida Console", Monaco, monospace;
+
+  animation-name: hold;
+  animation-duration: 6s;
+}
+
+a.resume:hover{
+  z-index: 4;
+  text-decoration: none;
+  background-color: rgba(0, 189, 255, 0.1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+a.titles:link, a.titles:visited{
+  text-decoration: none;
+
+}
+
+a.titles:hover{
+  color: rgb(0, 189, 255);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+#CSS-1{
+  z-index: 5;
+  margin: 10% 0px 0px 25%;
+  height:45px;
+  width:45px;
+  border-radius: 45px;
+  background:white;
+  color: rgb(10, 25, 47);
+  text-align: center;
+  font-family: 'Nunito';
+  font-weight: bolder;
+  font-size: 33px;
+  animation-name: hold;
+  animation-duration: 6s;
+}
+
+.maininfo{
+  animation-name: hold;
+  animation-duration: 6s;
+}
+
+.left-edge{
+  animation-name: hold1;
+  animation-duration: 6s;
+}
+
+.about, .coding{
+  animation-name: hold2;
+  animation-duration: 6s;
+}
+
+@keyframes hold{
+  0% {opacity: 0;}
+  50% {opacity: 0;}
+  100% {opacity: 100;}
+}
+
+@keyframes hold1{
+  0% {opacity: 0;}
+  70% {opacity: 0;}
+  100% {opacity: 100;}
+}
+
+@keyframes hold2{
+  0% {opacity: 0;}
+  90% {opacity: 0;}
+  100% {opacity: 100;}
+}
+
+#CSS-01{
+  width: 50%;
+  position: relative;
+  margin: auto;
+}
+
+/* ===================================
+   Main Info
+   ===================================
+ */
+
+.maininfo{
+  z-index: 5;
+  position: relative;
+  margin: auto;
+  margin-right: 10rem;
+  padding-top: 15rem;
+}
+
+#CSS-04{
+  z-index: inherit;
+  color: rgb(0, 189, 255);
+  font-size: 16px;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+  font-weight: normal;
+}
+
+#CSS-05{
+  z-index: inherit;
+  color: white;
+  font-family: "Fira Mono", "Roboto Mono";
+  font-weight: bold;
+  font-size: 80px;
+  line-height: 1.1;
+  margin: 0px 0px 10px 0px;
+}
+
+#CSS-06{
+  z-index: inherit;
+  color: rgb(204, 214, 246);
+  font-family: "Fira Mono", "Roboto Mono";
+  font-weight: bold;
+  font-size: 55px;
+  line-height: .9;
+  margin: 0px;
+}
+
+#CSS-07{
+  z-index: inherit;
+  font-family: "Fira Mono", "Roboto Mono";
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(204, 214, 246);
+  line-height: 1.3;
+  padding-top: 40px;
+}
+
+/* ===================================
+   About Section
+   ===================================
+ */
+
+.about{
+  z-index: 5;
+  position: relative;
+  margin-top: 25rem;
+  margin-right: 27%;
+}
+
+#CSS-08{
+  z-index: inherit;
+  color: rgb(204, 214, 246);
+  font-family: "Fira Mono", "Roboto Mono";
+  font-weight: bold;
+  font-size: 32px;
+}
+
+#CSS-09{
+  z-index: inherit;
+  display: block;
+  height: 3rem;
+}
+
+#CSS-10{
+  object-fit: cover;
+  object-position: center center;
+  opacity: 1;
+  z-index: inherit;
+  float: right;
+  width: 300px;
+  height: 300px;
+  vertical-align: middle;
+  padding-left: 10rem;
+}
+
+#CSS-11{
+  z-index: inherit;
+  color: rgb(136, 146, 176);
+  font-family: "Nunito";
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* ===================================
+   Code Section
+   ===================================
+ */
+
+.coding{
+  z-index: 5;
+  position: relative;
+  margin-top: 5rem;
+  margin-right: 27%;
+}
+
+#CSS-12{
+  z-index: inherit;
+  color: rgb(204, 214, 246);
+  font-family: "Fira Mono", "Roboto Mono";
+  font-weight: bold;
+  font-size: 32px;
+}
+
+#CSS-14{
+  z-index: inherit;
+  color: rgb(204, 214, 246);
+  font-family: "Fira Mono", "Roboto Mono";
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.problem{
+  margin-top: 5rem;
+}
+
+#CSS-15{
+  z-index: inherit;
+  color: rgb(154, 165, 199);
+  font-family: "Nunito";
+  font-size: 22px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+#CSS-16{
+  z-index: inherit;
+  color: rgb(136, 146, 176);
+  font-family: "Nunito";
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+#CSS-17{
+  z-index: inherit;
+  color: rgb(136, 146, 176);
+  font-family: "Nunito";
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#CSS-18{
+  position: relative;
+  margin-top: 25rem;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+
+#footer {
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
